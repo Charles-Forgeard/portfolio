@@ -5,79 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charles Forgeard Portfolio</title>
+    <link rel="preload" as="font" type="font/woff2" href="static/font/montserrat-regular-webfont.woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <header>
-        <picture>
-            <source>
-            <img src="#" alt="avatar picture">
-        </picture>
-        <h1>Mes réalisations</h1>
-        <ul>
-            <li><a href="#">Email</a></li>
-            <li><a href="#">Github</a></li>
-            <li><a href="#">LinkedIn</a></li>
-        </ul>
-    </header>
-    <nav>
-        <h2>Projets</h2>
-        <ul>
-            <li><a href="#">Titre du Projet 1</a></li>
-            <li><a href="#">Titre du Projet 2</a></li>
-            <li><a href="#">Titre du Projet 3</a></li>
-        </ul>
-    </nav>
-    <main>
-        <article>
-            <h3>Titre du Projet 1</h3>
+    <div class="container altFancyBorder">
+        <span class="altFancyBorderBG" aria-hidden="true"></span>
+        <header>
             <picture>
                 <source>
-                <img src="#" alt="#">
+                <img src="#" alt="avatar picture">
             </picture>
-            <p>Description du projet Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam. Illo
-                omnis ad, impedit, iure exercitationem soluta at non laborum ea neque aliquid. Mollitia voluptas
-                possimus exercitationem distinctio dolores explicabo!</p>
             <ul>
-                <li>Voir site</li>
-                <li>GitHub</li>
-                <li>...</li>
+                <li><a href="#"><img src="static/icon/mail.svg" alt="email icon"></a></li>
+                <li><a href="#"><img src="static/icon/github.svg" alt="github icon"></a></li>
+                <li><a href="#"><img src="static/icon/linkedIn.svg" alt="linkedIn icon"></a></li>
             </ul>
-        </article>
-        <article>
-            <h3>Titre du Projet 2</h3>
-            <picture>
-                <source>
-                <img src="#" alt="#">
-            </picture>
-            <p>Description du projet Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et unde, nemo error
-                similique quidem assumenda. At rerum fuga, ipsum consectetur non consequatur eaque porro pariatur. Et
-                perspiciatis blanditiis hic fugit?</p>
+        </header>
+        <main>
+            <h1>Mes réalisations</h1>
+            <article>
+                <h3>Titre du Projet 1</h3>
+                <picture>
+                    <source>
+                    <img src="#" alt="#">
+                </picture>
+                <p>Description du projet Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam. Illo
+                    omnis ad, impedit, iure exercitationem soluta at non laborum ea neque aliquid. Mollitia voluptas
+                    possimus exercitationem distinctio dolores explicabo!</p>
+                <ul>
+                    <li>Voir site</li>
+                    <li>GitHub</li>
+                    <li>...</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Titre du Projet 2</h3>
+                <picture>
+                    <source>
+                    <img src="#" alt="#">
+                </picture>
+                <p>Description du projet Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et unde, nemo error
+                    similique quidem assumenda. At rerum fuga, ipsum consectetur non consequatur eaque porro pariatur.
+                    Et
+                    perspiciatis blanditiis hic fugit?</p>
+                <ul>
+                    <li>Voir site</li>
+                    <li>GitHub</li>
+                    <li>...</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Titre du Projet 3</h3>
+                <picture>
+                    <source>
+                    <img src="#" alt="#">
+                </picture>
+                <p>Description du projet Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste modi
+                    accusantium,
+                    minima, excepturi a quae praesentium cupiditate nam adipisci dolorum placeat iure aut assumenda
+                    omnis
+                    eaque harum quod dolor nemo.</p>
+                <ul>
+                    <li>Voir site</li>
+                    <li>GitHub</li>
+                    <li>...</li>
+                </ul>
+            </article>
+        </main>
+        <nav class="altFancyBorder altFancyBorder-light altFancyBorder-border-top-left">
+            <span class="altFancyBorderBG" aria-hidden="true"></span>
+            <h2>Projets</h2>
             <ul>
-                <li>Voir site</li>
-                <li>GitHub</li>
-                <li>...</li>
+                <li><a href="#" class="underline">Titre du Projet 1</a></li>
+                <li><a href="#" class="underline">Titre du Projet 2</a></li>
+                <li><a href="#" class="underline">Titre du Projet 3</a></li>
             </ul>
-        </article>
-        <article>
-            <h3>Titre du Projet 3</h3>
-            <picture>
-                <source>
-                <img src="#" alt="#">
-            </picture>
-            <p>Description du projet Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste modi accusantium,
-                minima, excepturi a quae praesentium cupiditate nam adipisci dolorum placeat iure aut assumenda omnis
-                eaque harum quod dolor nemo.</p>
-            <ul>
-                <li>Voir site</li>
-                <li>GitHub</li>
-                <li>...</li>
-            </ul>
-        </article>
-    </main>
-    <footer>
-        ©2023 domain.fr
-    </footer>
+        </nav>
+        <footer>
+            ©2023 domain.fr
+        </footer>
+    </div>
 </body>
 
 </html>
