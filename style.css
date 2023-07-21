@@ -432,3 +432,45 @@ a:hover{
 .underline:hover::after {
     opacity: 0;
 }
+
+.logo{
+    font-size: 3rem;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    color: var(--textColor);
+    transition: all 0.3s ease-in-out;
+    transform: skew(0deg,-10deg) rotate(-0.025turn);
+}
+
+.logo::after{
+    position: absolute;
+    content:"C";
+    font-size: 3rem;
+    font-weight: bold;
+    top:0px;
+    left:-3px;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    color: var(--gradColor2);
+}
+
+.logo::before{
+    position: absolute;
+    content:"C";
+    font-size: 3.5rem;
+    font-weight: bold;
+    top:-7px;
+    left:0px;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    color: var(--gradColor1);
+    z-index: -1;
+}
+
+.logo:hover{
+    transform: skew(0deg,-10deg) scale(1.1);
+    color: var(--textColor);
+}
