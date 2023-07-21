@@ -1,12 +1,3 @@
-/* @font-face{
-    font-family:Montserrat-Regular;
-    src:url('static/font/montserrat-regular-webfont.eot');
-    src:url('static/font/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),url('static/font/montserrat-regular-webfont.woff2') format('woff2'),url('static/font/montserrat-regular-webfont.woff') format('woff'),url('static/font/montserrat-regular-webfont.ttf') format('truetype'),url('static/font/montserrat-regular-webfont.svg?') format('svg');
-    font-weight:400;
-    font-style:normal;
-    font-display:swap
-} */
-
 //Reset
 *,
 :before,
@@ -245,9 +236,7 @@ video {
 [hidden] {
     display: none
 }
-
 //Reset
-
 
 * {
     box-sizing: border-box;
@@ -256,7 +245,7 @@ video {
 @font-face{
     font-family:Montserrat-Regular;
     src:url('static/font/montserrat-regular-webfont.eot');
-    src:url('static/font/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),url('static/font/montserrat-regular-webfont.woff2') format('woff2'),url('static/font/montserrat-regular-webfont.woff') format('woff'),url('static/font/montserrat-regular-webfont.ttf') format('truetype'),url('static/font/montserrat-regular-webfont.svg?') format('svg');
+    src:url('static/font/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),url('static/font/montserrat-regular-webfont.woff2') format('woff2'),url('static/font/montserrat-regular-webfont.woff') format('woff'),url('static/font/montserrat-regular-webfont.ttf') format('truetype'),url('static/font/montserrat-regular-webfont.svg') format('svg');
     font-weight:400;
     font-style:normal;
     font-display:swap
@@ -371,12 +360,8 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: unset;
 }
 
-h1 {
-    font-size: 2rem;
-}
-
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 h3 {
@@ -433,10 +418,10 @@ a:hover{
     opacity: 0;
 }
 
+
 .logo{
     font-size: 3rem;
     font-weight: bold;
-    position: relative;
     display: inline-block;
     color: var(--textColor);
     transition: all 0.3s ease-in-out;
@@ -473,4 +458,29 @@ a:hover{
 .logo:hover{
     transform: skew(0deg,-10deg) scale(1.1);
     color: var(--textColor);
+}
+
+.titleIcone{
+    width: 75%;
+    aspectRatio: 4.5/1;
+    display: inline-block;
+    animation: fillOpacity 2s ease-in 2s forwards;
+}
+
+@keyframes fillOpacity{
+    to {
+        fill: var(--textColor);
+    }
+}
+
+.titleIcone path {
+    stroke-dasharray: 7500px;
+    stroke-dashoffset: 7500px;
+    animation: drawLetter 2s ease-in forwards;
+}
+
+@keyframes drawLetter{
+    to {
+        stroke-dashoffset: 0;
+    }
 }
