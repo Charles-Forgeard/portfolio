@@ -270,7 +270,7 @@ body {
     padding: 10px;
 }
 
-.altFancyBorder{
+.altFancyCorner{
     --border: 7.5px;
     --border-size: 100px;
     --border-radius: 6px;
@@ -279,12 +279,12 @@ body {
     z-index: 0;
 }
 
-.altFancyBorder > * {
+.altFancyCorner > * {
     position: relative;
     z-index: 3;
 }
 
-.altFancyBorder::before{
+.altFancyCorner::before{
     content: "";
     display: block;
     position: absolute;
@@ -297,7 +297,7 @@ body {
     background: linear-gradient(-45deg, transparent calc(100% - var(--border-size)),var(--gradColor2) calc(100% - var(--border-size)), var(--gradColor1));
 }
 
-.altFancyBorder::after{
+.altFancyCorner::after{
     content: "";
     display: block;
     position: absolute;
@@ -312,13 +312,13 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
-.altFancyBorderBG{
+.altFancyCornerBG{
     position: static;
 }
-.altFancyBorderBG > * {
+.altFancyCornerBG > * {
     position: relative;
 }
-.altFancyBorderBG::after{
+.altFancyCornerBG::after{
     content:"";
     display: block;
     position: absolute;
@@ -331,12 +331,12 @@ body {
     background-color: var(--background-color);
 }
 
-.altFancyBorder .altFancyBorder-light{
+.altFancyCorner .altFancyCorner-light{
     --border: 2px;
     --border-size: 88px
 }
 
-.altFancyBorder:hover::after{
+.altFancyCorner:hover::after{
     opacity: 0;
 }
 
@@ -368,46 +368,63 @@ a{
 
 a:hover{
     color: white;
+}
+
+nav a:hover{
     letter-spacing: 0.05rem;
 }
 
-.underline {
+.fancyBorder {
     position: relative;
     text-decoration: none;
+    --stroke: 1px;
 }
 
-.underline::after {
+.fancyBorder::after {
     content: "";
     display: block;
     position: absolute;
     bottom:-4px;
     left:0;
     width: 100%;
-    height: 1px;
+    height: var(--stroke);
     background-image: linear-gradient(90deg, var(--gradColor1) ,var(--gradColor2));
     opacity: 1;
     transition: all 0.3s ease-in-out;
 }
 
-.underline::before {
+.fancyBorder::before {
     content: "";
     display: block;
     position: absolute;
     bottom:-4px;
     left:0;
     width: 100%;
-    height: 1px;
+    height: var(--stroke);
     background-image: linear-gradient(90deg, var(--gradColor2) ,var(--gradColor1));
 }
 
-.underline:hover::after {
+.fancyBorder:hover::after {
     opacity: 0;
 }
 
-.underline.underline-stroke2::after, .underline.underline-stroke2::before {
-    height: 2px;
+.fancyBorder.fancyBorder-stroke2::after, .fancyBorder.fancyBorder-stroke2::before {
+    --stroke: 2px;
 }
 
+.fancyBorder.fancyBorder-left::after, .fancyBorder.fancyBorder-left::before{
+    height: 100%;
+    width: var(--stroke);
+    top: 0;
+}
+
+.fancyBorder.fancyBorder-left::after{
+    background-image: linear-gradient(45deg, var(--gradColor1) ,var(--gradColor2));
+}
+
+.fancyBorder.fancyBorder-left::before{
+    background-image: linear-gradient(45deg, var(--gradColor2) ,var(--gradColor1));
+}
 
 .logo{
     font-size: 3rem;
@@ -584,7 +601,7 @@ nav h2{
     margin: 30px 0;
 }
 
-nav .altFancyBorder {
+nav .altFancyCorner {
     margin:0;
     padding: 30px;
 }
@@ -603,19 +620,19 @@ footer.footer{
     footer.footer{
         justify-content: flex-end;
     }
-    .container.altFancyBorder{
+    .container.altFancyCorner{
         --border: 20px;
         --border-size: 210px;
     }
-    .container.altFancyBorder::before, .container.altFancyBorder::after{
+    .container.altFancyCorner::before, .container.altFancyCorner::after{
         width: calc(100% + calc(var(--border)*2));
         height: calc(100% + calc(var(--border)*2));
         border-bottom-right-radius: var(--border-radius)
     }
-    .container.altFancyBorder::before{
+    .container.altFancyCorner::before{
         background: linear-gradient(-45deg, var(--gradColor1) ,var(--gradColor2) var(--border-size),transparent var(--border-size), transparent calc(100% - var(--border-size)),var(--gradColor2) calc(100% - var(--border-size)), var(--gradColor1));  
     }
-    .container.altFancyBorder::after{
+    .container.altFancyCorner::after{
         background: linear-gradient(-45deg, var(--gradColor2) ,var(--gradColor1) var(--border-size) ,transparent var(--border-size), transparent calc(100% - var(--border-size)),var(--gradColor1) calc(100% - var(--border-size)), var(--gradColor2));
     }
 }
