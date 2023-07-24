@@ -1,0 +1,15 @@
+<svg class="titleIcone" viewBox="0 0 11034 2452" fill="rgba(0,0,0,0)"
+    xmlns="http://www.w3.org/2000/svg">
+    <g id="test">
+        <path d="M128 800V100h284q110 0 173.5 45T649 278q0 57-27.5 96t-76 58T434 451l17-16q78 0 130 21t79 61 27 99q0 88-63.5 136T432 800H128zm34-30h272q107 0 163-37.5T653 615q0-81-56-118.5T434 459H156v-29h257q96 0 149.5-38T616 280t-53.5-112T413 130H162v640z" stroke="white" stroke-width="5" />
+        <path d="M111 800V281h33v519h-33zm16-655q-13 0-23-10t-10-22q0-14 10-23.5t23-9.5q14 0 23.5 9.5T160 112t-9.5 23-23.5 10z" stroke="white" stroke-width="5" transform="translate(750)" />
+        <path d="M315 803q-77 0-136-33.5T86 676 52 540q0-77 31.5-136t87-93T296 277q69 0 124.5 33t87 91.5T539 536v9H74v-27h447l-13 16q0-65-27.5-116.5t-75.5-81T296 307t-109 29.5-75.5 81T84 535v6q0 68 30 120.5t82 82T315 773q51 0 96.5-19t75.5-58l21 22q-35 42-85.5 63.5T315 803z" stroke="white" stroke-width="5" transform="translate(1000)" />
+        <path d="M356 277q64 0 110.5 25t72.5 73.5T565 495v305h-33V497q0-93-47-141t-132-48q-65 0-112 26t-72 74-25 112v280h-33V281h32v146l-4-9q24-65 79.5-103T356 277z" stroke="white" stroke-width="5" transform="translate(1600)" />
+        <path d="M242 800L5 281h36l225 499h-15l226-499h35L275 800h-33z" stroke="white" stroke-width="5" transform="translate(2300)" />
+        <path d="M315 803q-77 0-136-33.5T86 676 52 540q0-77 31.5-136t87-93T296 277q69 0 124.5 33t87 91.5T539 536v9H74v-27h447l-13 16q0-65-27.5-116.5t-75.5-81T296 307t-109 29.5-75.5 81T84 535v6q0 68 30 120.5t82 82T315 773q51 0 96.5-19t75.5-58l21 22q-35 42-85.5 63.5T315 803z" stroke="white" stroke-width="5" transform="translate(2850)" />
+        <path d="M356 277q64 0 110.5 25t72.5 73.5T565 495v305h-33V497q0-93-47-141t-132-48q-65 0-112 26t-72 74-25 112v280h-33V281h32v146l-4-9q24-65 79.5-103T356 277z" stroke="white" stroke-width="5" transform="translate(3450)" />
+        <path d="M320 803q-67 0-115-24.5t-74-73T105 586V281h33v303q0 93 48 141t135 48q62 0 107.5-26.5T498 672t24-111V281h33v519h-32V655l4 9q-22 64-76 101.5T320 803z" stroke="white" stroke-width="5" transform="translate(4075)" />
+        <path d="M315 803q-77 0-136-33.5T86 676 52 540q0-77 31.5-136t87-93T296 277q69 0 124.5 33t87 91.5T539 536v9H74v-27h447l-13 16q0-65-27.5-116.5t-75.5-81T296 307t-109 29.5-75.5 81T84 535v6q0 68 30 120.5t82 82T315 773q51 0 96.5-19t75.5-58l21 22q-35 42-85.5 63.5T315 803z" stroke="white" stroke-width="5" transform="translate(4725)" />
+        <path d="M95 803q-13 0-23-9.5T62 770t10-23.5 23-9.5q14 0 23.5 9.5T128 770t-9.5 23.5T95 803z" stroke="white" stroke-width="5" transform="translate(5300)"/>
+    </g>
+</svg>

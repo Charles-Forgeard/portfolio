@@ -349,6 +349,11 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: unset;
 }
 
+h1{
+    padding-bottom: 15px;
+    --letter-spacing: 700;
+}
+
 h2, h3 {
     font-size: 1.8rem;
 }
@@ -446,8 +451,8 @@ a:hover{
 }
 
 .titleIcone{
-    width: 75%;
-    aspectRatio: 4.5/1;
+    width: 90%;
+    aspect-ratio: 5500/900;
     display: inline-block;
     animation: fillOpacity 2s ease-in 2s forwards;
 }
@@ -459,8 +464,8 @@ a:hover{
 }
 
 .titleIcone > * {
-    stroke-dasharray: 7500px;
-    stroke-dashoffset: 7500px;
+    stroke-dasharray: 3700px;
+    stroke-dashoffset: 3700px;
     animation: drawLetter 2s ease-in forwards;
 }
 
