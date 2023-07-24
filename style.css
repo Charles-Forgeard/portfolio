@@ -1,4 +1,4 @@
-//Reset
+/*Reset*/
 *,
 :before,
 :after {
@@ -236,11 +236,8 @@ video {
 [hidden] {
     display: none
 }
-//Reset
 
-* {
-    box-sizing: border-box;
-}
+/*Reset*/
 
 @font-face{
     font-family:Montserrat-Regular;
@@ -264,7 +261,6 @@ body {
     background-color: var(--background-color);
     font-family: Montserrat-Regular;
     margin: 0;
-    padding: 10px;
 }
 
 
@@ -275,8 +271,8 @@ body {
 }
 
 .altFancyBorder{
-    --border: 20px;
-    --border-size: 210px;
+    --border: 7.5px;
+    --border-size: 100px;
     --border-radius: 6px;
     margin: var(--border);
     position: relative;
@@ -294,11 +290,11 @@ body {
     position: absolute;
     left: calc(var(--border)*-1);
     top: calc(var(--border)*-1);
-    width: calc(100% + calc(var(--border)*2));
-    height: calc(100% + calc(var(--border)*2));
-    border-radius: var(--border-radius);
+    width: var(--border-size);
+    height: var(--border-size);
+    border-top-left-radius: var(--border-radius);
     z-index: 0;
-    background: linear-gradient(-45deg, var(--gradColor1) ,var(--gradColor2) var(--border-size),transparent var(--border-size), transparent calc(100% - var(--border-size)),var(--gradColor2) calc(100% - var(--border-size)), var(--gradColor1));
+    background: linear-gradient(-45deg, transparent calc(100% - var(--border-size)),var(--gradColor2) calc(100% - var(--border-size)), var(--gradColor1));
 }
 
 .altFancyBorder::after{
@@ -307,13 +303,13 @@ body {
     position: absolute;
     left: calc(var(--border)*-1);
     top: calc(var(--border)*-1);
-    width: calc(100% + calc(var(--border)*2));
-    height: calc(100% + calc(var(--border)*2));
-    border-radius: 6px;
+    width: var(--border-size);
+    height: var(--border-size);
+    border-top-left-radius: var(--border-radius);
     z-index: 1;
     opacity: 1;
-    background: linear-gradient(-45deg, var(--gradColor2) ,var(--gradColor1) var(--border-size) ,transparent var(--border-size), transparent calc(100% - var(--border-size)),var(--gradColor1) calc(100% - var(--border-size)), var(--gradColor2));
-    transition: all 0.3s ease-in-out;
+    background: linear-gradient(-45deg, transparent calc(100% - var(--border-size)),var(--gradColor1) calc(100% - var(--border-size)), var(--gradColor2));
+    transition: opacity 0.3s ease-in-out;
 }
 
 .altFancyBorderBG{
@@ -335,16 +331,9 @@ body {
     background-color: var(--background-color);
 }
 
-.altFancyBorder .altFancyBorder-light::before, .altFancyBorder .altFancyBorder-light::after{
+.altFancyBorder .altFancyBorder-light{
     --border: 2px;
-    --border-size: 50px
-}
-
-.altFancyBorder .altFancyBorder-border-top-left::before{
-    background: linear-gradient(-45deg, transparent calc(100% - var(--border-size)),var(--gradColor2) calc(100% - var(--border-size)), var(--gradColor1));
-}
-.altFancyBorder .altFancyBorder-border-top-left::after{
-    background: linear-gradient(-45deg, transparent calc(100% - var(--border-size)),var(--gradColor1) calc(100% - var(--border-size)), var(--gradColor2));
+    --border-size: 88px
 }
 
 .altFancyBorder:hover::after{
@@ -360,16 +349,8 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: unset;
 }
 
-h2 {
+h2, h3 {
     font-size: 1.8rem;
-}
-
-h3 {
-    font-size: 1rem;
-}
-
-nav {
-    padding: 5px
 }
 
 a{
@@ -416,6 +397,10 @@ a:hover{
 
 .underline:hover::after {
     opacity: 0;
+}
+
+.underline.underline-stroke2::after, .underline.underline-stroke2::before {
+    height: 2px;
 }
 
 
@@ -473,7 +458,7 @@ a:hover{
     }
 }
 
-.titleIcone path {
+.titleIcone > * {
     stroke-dasharray: 7500px;
     stroke-dashoffset: 7500px;
     animation: drawLetter 2s ease-in forwards;
@@ -484,3 +469,173 @@ a:hover{
         stroke-dashoffset: 0;
     }
 }
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header ul {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+header .icon{
+    width: 25px;
+    color: #777;
+    transition: all 0.15s ease-in-out;
+}
+
+header .icon:hover{
+    transform: scale(1.2);
+}
+
+.icon.mail:hover{
+    color: #EA4335;
+    filter: drop-shadow(2px 2px 2px #FBBC05) drop-shadow(-2px -2px 2px #4285F4)
+}
+
+.icon.github:hover{
+    color: #1F2328;
+    filter: drop-shadow(0px 0px 4px white)
+}
+
+.icon.linkedIn:hover{
+    color: #0A66C2;
+}
+
+.icon.linkedin{
+    position: relative;
+}
+
+.bg-white-hover{
+    position: relative;
+}
+
+.bg-white-hover::before{
+    content:"";
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    z-index: -1;
+    transition: all 0.15s ease-in-out;
+}
+
+.bg-white-hover:hover::before{
+    background-color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "article" "nav";
+}
+
+main p{
+    padding-left: 30px;
+    margin: 1em 0;
+}
+
+.welcome-article{
+    transform-origin: left;
+}
+
+article, .welcome-article{
+    grid-area: article;
+    transition: all 0.3s ease-in-out;
+}
+
+article{
+    transform: scale(0,1);
+    transform-origin: right;
+}
+
+article:target{
+    transform: scale(1,1)
+}
+
+main:has(article:target) .welcome-article{
+    transform: scale(0,1);
+}
+
+article ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    font-weight: 700;
+}
+
+nav{
+    grid-area: nav;
+}
+
+nav h2{
+    margin: 30px 0;
+}
+
+nav .altFancyBorder {
+    margin:0;
+    padding: 30px;
+}
+
+nav li{
+    margin-bottom: 15px;
+}
+
+footer.footer{
+    margin: 35px 0 27px 0;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 500px){
+    footer.footer{
+        justify-content: flex-end;
+    }
+    .container.altFancyBorder{
+        --border: 20px;
+        --border-size: 210px;
+    }
+    .container.altFancyBorder::before, .container.altFancyBorder::after{
+        width: calc(100% + calc(var(--border)*2));
+        height: calc(100% + calc(var(--border)*2));
+        border-bottom-right-radius: var(--border-radius)
+    }
+    .container.altFancyBorder::before{
+        background: linear-gradient(-45deg, var(--gradColor1) ,var(--gradColor2) var(--border-size),transparent var(--border-size), transparent calc(100% - var(--border-size)),var(--gradColor2) calc(100% - var(--border-size)), var(--gradColor1));  
+    }
+    .container.altFancyBorder::after{
+        background: linear-gradient(-45deg, var(--gradColor2) ,var(--gradColor1) var(--border-size) ,transparent var(--border-size), transparent calc(100% - var(--border-size)),var(--gradColor1) calc(100% - var(--border-size)), var(--gradColor2));
+    }
+}
+
+@media (min-width: 900px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    main{
+        grid-template-columns: 57.3% auto 34.73%;
+        grid-template-areas: "article . nav";
+        padding-left: 50px;
+        min-height: 589px;
+        align-items:center;
+    }
+    .container{
+        min-height: 651px;
+        max-width: 1240px;
+        padding: 30px;
+    }
+    article h3{
+        margin: 60px 0 30px;
+    }
+}
+
