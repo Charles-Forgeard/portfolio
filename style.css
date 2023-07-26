@@ -267,7 +267,7 @@ body {
 
 .container{
     background-color: var(--background-color);
-    padding: 10px;
+    padding: 15px;
 }
 
 .altFancyCorner{
@@ -372,6 +372,7 @@ a:hover{
 
 nav a:hover{
     letter-spacing: 0.05rem;
+    color: white;
 }
 
 .fancyBorder {
@@ -497,6 +498,7 @@ header{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap:30px;
 }
 
 header ul {
@@ -582,7 +584,11 @@ article:target{
     transform: scale(1,1)
 }
 
-main:has(article:target) .welcome-article{
+article:has(*:focus){
+    transform: scale(1,1)
+}
+
+main:has(article:target) .welcome-article, main:has(article *:focus) .welcome-article{
     transform: scale(0,1);
 }
 
@@ -616,9 +622,38 @@ footer.footer{
     justify-content: center;
 }
 
+dialog{
+    border-radius: 6px;
+    position: fixed;
+    top: 20px;
+}
+
+dialog[open]{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+dialog button{
+    font-size: 2rem;
+    width: 32px;
+    height: 32px;
+    line-height: 100%;
+}
+
+@keyframes{
+    to{
+
+    }
+}
+
+
 @media (min-width: 500px){
     footer.footer{
         justify-content: flex-end;
+    }
+    .container{
+        padding: 30px;
     }
     .container.altFancyCorner{
         --border: 20px;
@@ -642,7 +677,7 @@ footer.footer{
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        min-height: 100vh;
     }
     main{
         grid-template-columns: 57.3% auto 34.73%;
@@ -654,7 +689,6 @@ footer.footer{
     .container{
         min-height: 651px;
         max-width: 1240px;
-        padding: 30px;
     }
     article h3{
         margin: 60px 0 30px;

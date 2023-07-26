@@ -7,35 +7,45 @@
     <title>Charles Forgeard Portfolio</title>
     <link rel="preload" as="font" type="font/woff2" href="static/font/montserrat-regular-webfont.woff2" crossorigin>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
+
+    <dialog id="dialogEmail" role="dialog" aria-labelledby="dialogEmail_text" style="z-index:3;">
+        <span id="dialogEmail_text" data-errorText="charlesforgeard@gmail.com">Email copié!</span>
+        <button id="dialogEmail_btn" aria-label="close">&times;</button>
+    </dialog>
+
     <div class="container altFancyCorner">
         <span class="altFancyCornerBG" aria-hidden="true"></span>
         <header>
-            <a href="#welcome" class="logo">C</a>
+            <a href="index.html#welcome" class="logo" aria-label="Retour à l'accueil">C</a>
             <ul>
                 <li>
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="mail icon">
-                            <use href="static/icon/mail.svg#path" type="image/svg+xml"></use>
+                    <a href="https://www.linkedin.com/in/charles-forgeard/" class="bg-white-hover"
+                        aria-label="linkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="linkedIn icon"
+                            aria-hidden="true" focusable="false">
+                            <use href="static/icon/linkedIn.svg#path" type="image/svg+xml"></use>
                         </svg>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="github icon">
+                    <a href="https://github.com/Charles-Forgeard/" aria-label="github">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="github icon"
+                            aria-hidden="true" focusable="false">
                             <use href="static/icon/github.svg#path" type="image/svg+xml"></use>
                         </svg>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="bg-white-hover">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="linkedIn icon">
-                            <use href="static/icon/linkedIn.svg#path" type="image/svg+xml"></use>
+                    <button id="copyEmailBtn" type="button" aria-label="copier ou écrire email"
+                        data-email="charlesforgeard@gmail.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="mail icon" aria-hidden="true"
+                            focusable="false">
+                            <use href="static/icon/mail.svg#path" type="image/svg+xml"></use>
                         </svg>
-                    </a>
+                    </button>
                 </li>
             </ul>
         </header>
@@ -82,9 +92,10 @@
                         possimus exercitationem distinctio dolores explicabo!</p>
                 </div>
                 <ul>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2">Voir site</a></li>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2">GitHub</a></li>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2">...</a></li>
+                    <li><a href="#" class="fancyBorder fancyBorder-stroke2" aria-label="Site du projet 1">Voir
+                            site</a></li>
+                    <li><a href="#" class="fancyBorder fancyBorder-stroke2"
+                            aria-label="Dépôt github du projet 1">GitHub</a></li>
                 </ul>
             </article>
             <article id="projet2">
@@ -100,9 +111,10 @@
                         possimus exercitationem distinctio dolores explicabo!</p>
                 </div>
                 <ul>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2">Voir site</a></li>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2">GitHub</a></li>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2">...</a></li>
+                    <li><a href="#" class="fancyBorder fancyBorder-stroke2" aria-label="Site du projet 2">Voir
+                            site</a></li>
+                    <li><a href="#" class="fancyBorder fancyBorder-stroke2"
+                            aria-label="Dépôt github du projet 2">GitHub</a></li>
                 </ul>
             </article>
             <article id="projet3">
@@ -120,16 +132,18 @@
                         perspiciatis blanditiis hic fugit?</p>
                 </div>
                 <ul>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2">Voir site</a></li>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2">GitHub</a></li>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2">...</a></li>
+                    <li><a href="#" class="fancyBorder fancyBorder-stroke2" aria-label="Site du projet 3">Voir
+                            site</a></li>
+                    <li><a href="#" class="fancyBorder fancyBorder-stroke2"
+                            aria-label="Dépôt github du projet 3">GitHub</a></li>
                 </ul>
             </article>
         </main>
         <footer class="footer">
-            ©2023 domain.fr
+            ©2023 charles-forgeard.github.io/portfolio/
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
