@@ -23,6 +23,45 @@ const setGradColors = (colors)=>{
 
 setGradColors(pic2RandomColors(randomUnit()))
 
+const copyEmailBtn = document.getElementById("copyEmailBtn")
+
+dialogEmail_btn.addEventListener('click', (e)=>{
+    e.preventDefault()
+    dialogEmail.close()
+    copyEmailBtn.focus()
+})
+
+const isClipboardWriteAllowed = async ()=>{
+    const {state} = await navigator.permissions.query({name: "clipboard-write"})
+    return ["granted","prompt"].includes(state)
+}
+
+const dialogEmailBaseText = dialogEmail_text.innerText;
+
+copyEmailBtn.addEventListener('click', async (e)=>{
+    e.preventDefault()
+    const email = copyEmailBtn.dataset.email
+    window.location.href =`mailto:nom@mailpro.com?subject=Prise%20de%20contact%20projet%20devWeb&body=Bonjour,%0D%0A%0D%0A{Votre demande}%0D%0A(La rédaction est chronophage? Laissez moi vos coordonnées, je vous recontacte dans les plus brefs délais %F0%9F%9A%80.)%0D%0A%0D%0AVoici%20mes%20coordonnées%20:%0D%0A{Prénom}%20{Nom}%0D%0A{Num tél}%0D%0A{lien de contact}`
+    dialogEmail_text.innerText = dialogEmailBaseText
+    try{
+        dialogEmail.setAttribute('open','true');
+        dialogEmail_btn.focus()
+        console.log(await isClipboardWriteAllowed())
+        if(await isClipboardWriteAllowed()){
+            await navigator.clipboard.writeText(email);
+            setTimeout(()=>{
+                copyEmailBtn.focus()
+                dialogEmail.close()
+            },5000)
+        }else{
+            dialogEmail_text.innerText = `Email à copier: ${dialogEmail_text.dataset.errortext}`;
+        }
+    }catch(e){
+        console.warn(e)
+        dialogEmail_text.innerText = `Email à copier: ${dialogEmail_text.dataset.errortext}`;
+    }
+})
+
 
 
 
