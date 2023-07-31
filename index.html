@@ -104,6 +104,93 @@
             </ul>
         </header>
         <main>
+            <nav>
+                <h2>Projets</h2>
+                <ul class="altFancyCorner altFancyCorner-light">
+                    <span class="altFancyCornerBG" aria-hidden="true"></span>
+                    <li><a href="#groupomania" class="fancyBorder">Groupomania</a></li>
+                    <li><a href="#portfolio" class="fancyBorder">Mon portfolio</a></li>
+                    <li><a href="#mms" class="fancyBorder">🚧 MMS 🚧</a></li>
+                </ul>
+            </nav>
+            <article id="groupomania">
+                <h3>Groupomania</h3>
+                <div class="fancyBorder fancyBorder-left fancyBorder-stroke2">
+                    <p>Dernier projet réalisé durant ma formation de développeur web au sein d'OpenClassrooms, il
+                        s'agissait de créer un réseau social interne d'entreprise. Les utilisateurs pouvaient créer des
+                        posts, les modifier et les supprimer et l'administrateur... les administrer. Les posts devaient
+                        pouvoir contenir du texte et une image. Les sessions devaient perdurer durant la connexion.</p>
+                    <div>
+                        <h4>Mise en œuvre</h4>
+                        <ul>
+                            <li>UI avec React.js / react-router-dom / socket.io / bootstrap.</li>
+                            <li>Environnement Node.js avec serveur Express.js, websocket avec socket.io et
+                                express-session.</li>
+                            <li>Création d'une API pour la connexion / création de compte / obtention des derniers
+                                messages.</li>
+                            <li>Validation des données de connexion avec validator et cryptage en base de données avec
+                                argon2 et crypto.</li>
+                            <li>Sécurisation des communications par requêtes http en ssl avec la mise en place d'un
+                                reverse proxy NGYNX.</li>
+                            <li>Base de données SQLite.</li>
+                        </ul>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="https://groupomania-app.now-dns.org/" target="_blanck"
+                            class="fancyBorder fancyBorder-stroke2" aria-label="Site du projet 1">Voir
+                            site</a></li>
+                    <li><a href="https://github.com/Charles-Forgeard/OC-DW-P7" target="_blanck"
+                            class="fancyBorder fancyBorder-stroke2" aria-label="Dépôt github du projet 1">GitHub</a>
+                    </li>
+                </ul>
+            </article>
+            <article id="portfolio">
+                <h3>Mon portfolio</h3>
+                <div class="fancyBorder fancyBorder-left fancyBorder-stroke2">
+                    <p>Je désirais réaliser une landing page la plus efficace possible. C'est a dire
+                        qu'elle ne devait pas utiliser de techno superflues mais faire preuve d'un minimum de savoir
+                        faire technique au niveau du style, de l'accessibilité et de son référencement naturel. Pour le
+                        design, j'ai repris celui de <a href="https://dunks1980.com/"
+                            class="fancyBorder fancyBorder-stroke2" aria-label="Protfolio de Ian Dunkerley">Ian
+                            Dunkerley</a>, cité parmis les <a
+                            href="https://www.hostinger.fr/tutoriels/portfolio-developpeur-web"
+                            class="fancyBorder fancyBorder-stroke2">meilleurs web designs</a> de portfolio par
+                        Hostinger.
+                    </p>
+                    <div>
+                        <h4>Mise en œuvre</h4>
+                        <ul>
+                            <li>La navigation se fait exclusivement en HTML/CSS.</li>
+                            <li>Le JS n'est utilisé que pour le rendu de couleurs aléatoires des bordures et le contact
+                                par email.</li>
+                            <li>Un subset de la font est réalisé.</li>
+                            <li>Le logo est un rendu CSS de la font.</li>
+                            <li>Les images optimisées sont exclusivements utilisées dans les strucured data.</li>
+                            <li>Toutes les animations des icônes sont réalisées en css avec une seule image par icône.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="#welcome class=" fancyBorder fancyBorder-stroke2" aria-label="Retour à l'accueil">Vous
+                            y êtes déjà</a></li>
+                    <li><a href="https://github.com/Charles-Forgeard/portfolio" class="fancyBorder fancyBorder-stroke2"
+                            aria-label="Dépôt github du projet 2">GitHub</a></li>
+                </ul>
+            </article>
+            <article id="mms">
+                <h3>MMS</h3>
+                <div class="fancyBorder fancyBorder-left fancyBorder-stroke2">
+                    <p>L'objectif de ce projet est de permettre aux patients en ayant besoin de réaliser un Mini Memory
+                        State. C'est un test réaliser afin d'évaluer le degré de démense ou de confusion mentale d'un
+                        patient.</p>
+                    <p>Ainsi le soignant pourrait avoir accès aux tests réalisés à domicile et pouvoir avancer le
+                        rendez-vous avec le spécialiste si besoin. L'application permettrait également d'avoir un viseul
+                        de l'évolution des scores obtenus. Le test de l'horloge devrait être implémenté.</p>
+                    <p>Ce projet est actuellement en développement.</p>
+                </div>
+            </article>
             <div class="welcome-article" id="welcome">
                 <h1>
                     <svg class="titleIcone" viewBox="0 0 5500 900" fill="rgba(0,0,0,0)" aria-labelledby="h1-title"
@@ -124,116 +211,6 @@
                         WebSockets et en gérant des bases de données SQL ou NoSQL.</p>
                 </div>
             </div>
-            <nav>
-
-                <h2>Projets</h2>
-                <ul class="altFancyCorner altFancyCorner-light">
-                    <span class="altFancyCornerBG" aria-hidden="true"></span>
-                    <li><a href="#projet1" class="fancyBorder">Groupomania</a></li>
-                    <li><a href="#projet2" class="fancyBorder">Mon portfolio</a></li>
-                    <li><a href="#projet3" class="fancyBorder">🚧 MMS 🚧</a></li>
-                </ul>
-            </nav>
-            <article id="projet1">
-                <h3>Groupomania</h3>
-                <div class="fancyBorder fancyBorder-left fancyBorder-stroke2">
-                    <p>Dernier projet réalisé durant ma formation de développeur web au sein d'OpenClassrooms, il
-                        s'agissait de créer un réseau social interne d'entreprise.</p>
-
-                    <div>
-                        <h4>Spécifications techniques</h4>
-                        <ul>
-                            <li>Respect des standards WCAG.</li>
-                            <li>Utilisation d'un framework JS.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Spécifications fonctionnelles</h4>
-                        <ul>
-                            <li>Connexion utilisteur.</li>
-                            <li>Persistance de la session durant la connexion.</li>
-                            <li>Sécurisation des données de connexion.</li>
-                            <li>La page d'accueil liste les posts de manière antéchronologique.</li>
-                            <li>Les posts peuvent être likés.</li>
-                            <li>L'utilisateur doit pouvoir créer/supprimer/modifier un posts.</li>
-                            <li>Le post doit contenir du texte et une image de manière optionnelle.</li>
-                            <li>Un compte administrateur existe avec des capacités de modération.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Mise en œuvre</h4>
-                        <ul>
-                            <li>UI avec React.js / react-router-dom / socket.io / bootstrap.</li>
-                            <li>Environnement Node.js avec serveur Express.js, websocket avec socket.io et
-                                express-session.</li>
-                            <li>Création d'une API pour la connexion / création de compte / obtention des derniers
-                                messages.</li>
-                            <li>Validation des données de connexion avec validator et cryptage en base de données avec
-                                argon2 et crypto.</li>
-                            <li>Sécurisation des communications par requêtes http en ssl avec la mise en place d'un
-                                reverse proxy NGYNX.</li>
-                            <li>Base de données SQLite.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Les plus</h4>
-                        <ul>
-                            <li>L'utilisateur peut ajouter et supprimer plusieurs images au sein d'un même post.</li>
-                            <li>Les images sont optimisées à l'aide de l'api tinypng.</li>
-                            <li>L'api et le websocket partagent le même session store en base de données, ce qui permet
-                                une déconnection de l'utilisateur lorsque la connexion websocket est perdue.</li>
-                            <li>L'utilisateur peux ajouter/modifier les données de son profil (mot de passe, identité,
-                                email, photo).</li>
-                            <li>L'admin peut également modifier les données des comptes utilisateurs.</li>
-                            <li>Déploiement de l'app React et serveur derrière un reverse proxy NGYNX sur Raspberry Pi
-                                3.
-                            </li>
-                        </ul>
-                    </div>
-                    <p>
-
-                    </p>
-                </div>
-                <ul>
-                    <li><a href="https://groupomania-app.now-dns.org/" target="_blanck"
-                            class="fancyBorder fancyBorder-stroke2" aria-label="Site du projet 1">Voir
-                            site</a></li>
-                    <li><a href="https://github.com/Charles-Forgeard/OC-DW-P7" target="_blanck"
-                            class="fancyBorder fancyBorder-stroke2" aria-label="Dépôt github du projet 1">GitHub</a>
-                    </li>
-                </ul>
-            </article>
-            <article id="projet2">
-                <h3>Mon portfolio</h3>
-                <div class="fancyBorder fancyBorder-left fancyBorder-stroke2">
-                    <p>Pour mon portfolio je désirais réaliser une landing page la plus efficace possible. C'est a dire
-                        qu'elle ne devait pas utiliser de techno superflues mais faire preuve d'un minimum de savoir
-                        faire technique au niveau du style, de l'accessibilité et de son référencement naturel.</p>
-                </div>
-                <ul>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2" aria-label="Site du projet 2">Voir
-                            site</a></li>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2"
-                            aria-label="Dépôt github du projet 2">GitHub</a></li>
-                </ul>
-            </article>
-            <article id="projet3">
-                <h3>Titre du Projet 3</h3>
-                <div class="fancyBorder fancyBorder-left fancyBorder-stroke2">
-                    <p>Description du projet Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et unde, nemo
-                        error
-                        similique quidem assumenda. At rerum fuga, ipsum consectetur non consequatur eaque porro
-                        pariatur.
-                        Et
-                        perspiciatis blanditiis hic fugit?</p>
-                </div>
-                <ul>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2" aria-label="Site du projet 3">Voir
-                            site</a></li>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2"
-                            aria-label="Dépôt github du projet 3">GitHub</a></li>
-                </ul>
-            </article>
         </main>
         <footer class="footer">
             ©2023 charlesforgeard.com
