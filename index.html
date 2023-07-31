@@ -114,13 +114,14 @@
                 </h1>
                 <div class="fancyBorder fancyBorder-left fancyBorder-stroke2">
                     <p>
-                        Présentation de mon profil Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-                        quas
-                        enim eos maiores totam iste ea quisquam vero ipsam nulla aperiam eaque facere.
+                        Depuis le début de mon parcours professionnel, résoudre des problèmes et participer à une
+                        dynamique d'équipe agréable et efficace est une source de joie qui m'anime chaque jour.
                     </p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae atque, accusantium be.
-                        Accusantium
-                        be.</p>
+                    <p>En tant que développeur web, j'apprécie tout particulièrement l'intégration de web designs et la
+                        création d'interfaces utilisateurs avec React.js. Je tiens également à m'assurer que ces
+                        interfaces soient accessibles et optimisées pour le référencement naturel. J'aime également
+                        prendre en charge la partie back-end d'une application, notamment en créant des API REST, des
+                        WebSockets et en gérant des bases de données SQL ou NoSQL.</p>
                 </div>
             </div>
             <nav>
@@ -128,33 +129,86 @@
                 <h2>Projets</h2>
                 <ul class="altFancyCorner altFancyCorner-light">
                     <span class="altFancyCornerBG" aria-hidden="true"></span>
-                    <li><a href="#projet1" class="fancyBorder">Titre du Projet 1</a></li>
-                    <li><a href="#projet2" class="fancyBorder">Titre du Projet 2</a></li>
-                    <li><a href="#projet3" class="fancyBorder">Titre du Projet 3</a></li>
+                    <li><a href="#projet1" class="fancyBorder">Groupomania</a></li>
+                    <li><a href="#projet2" class="fancyBorder">Mon portfolio</a></li>
+                    <li><a href="#projet3" class="fancyBorder">🚧 MMS 🚧</a></li>
                 </ul>
             </nav>
             <article id="projet1">
-                <h3>Titre du Projet 1</h3>
+                <h3>Groupomania</h3>
                 <div class="fancyBorder fancyBorder-left fancyBorder-stroke2">
-                    <p>Description du projet Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam.
-                        Illo
-                        omnis ad, impedit, iure exercitationem soluta at non laborum ea neque aliquid. Mollitia voluptas
-                        possimus exercitationem distinctio dolores explicabo!</p>
+                    <p>Dernier projet réalisé durant ma formation de développeur web au sein d'OpenClassrooms, il
+                        s'agissait de créer un réseau social interne d'entreprise.</p>
+
+                    <div>
+                        <h4>Spécifications techniques</h4>
+                        <ul>
+                            <li>Respect des standards WCAG.</li>
+                            <li>Utilisation d'un framework JS.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Spécifications fonctionnelles</h4>
+                        <ul>
+                            <li>Connexion utilisteur.</li>
+                            <li>Persistance de la session durant la connexion.</li>
+                            <li>Sécurisation des données de connexion.</li>
+                            <li>La page d'accueil liste les posts de manière antéchronologique.</li>
+                            <li>Les posts peuvent être likés.</li>
+                            <li>L'utilisateur doit pouvoir créer/supprimer/modifier un posts.</li>
+                            <li>Le post doit contenir du texte et une image de manière optionnelle.</li>
+                            <li>Un compte administrateur existe avec des capacités de modération.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Mise en œuvre</h4>
+                        <ul>
+                            <li>UI avec React.js / react-router-dom / socket.io / bootstrap.</li>
+                            <li>Environnement Node.js avec serveur Express.js, websocket avec socket.io et
+                                express-session.</li>
+                            <li>Création d'une API pour la connexion / création de compte / obtention des derniers
+                                messages.</li>
+                            <li>Validation des données de connexion avec validator et cryptage en base de données avec
+                                argon2 et crypto.</li>
+                            <li>Sécurisation des communications par requêtes http en ssl avec la mise en place d'un
+                                reverse proxy NGYNX.</li>
+                            <li>Base de données SQLite.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Les plus</h4>
+                        <ul>
+                            <li>L'utilisateur peut ajouter et supprimer plusieurs images au sein d'un même post.</li>
+                            <li>Les images sont optimisées à l'aide de l'api tinypng.</li>
+                            <li>L'api et le websocket partagent le même session store en base de données, ce qui permet
+                                une déconnection de l'utilisateur lorsque la connexion websocket est perdue.</li>
+                            <li>L'utilisateur peux ajouter/modifier les données de son profil (mot de passe, identité,
+                                email, photo).</li>
+                            <li>L'admin peut également modifier les données des comptes utilisateurs.</li>
+                            <li>Déploiement de l'app React et serveur derrière un reverse proxy NGYNX sur Raspberry Pi
+                                3.
+                            </li>
+                        </ul>
+                    </div>
+                    <p>
+
+                    </p>
                 </div>
                 <ul>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2" aria-label="Site du projet 1">Voir
+                    <li><a href="https://groupomania-app.now-dns.org/" target="_blanck"
+                            class="fancyBorder fancyBorder-stroke2" aria-label="Site du projet 1">Voir
                             site</a></li>
-                    <li><a href="#" class="fancyBorder fancyBorder-stroke2"
-                            aria-label="Dépôt github du projet 1">GitHub</a></li>
+                    <li><a href="https://github.com/Charles-Forgeard/OC-DW-P7" target="_blanck"
+                            class="fancyBorder fancyBorder-stroke2" aria-label="Dépôt github du projet 1">GitHub</a>
+                    </li>
                 </ul>
             </article>
             <article id="projet2">
-                <h3>Titre du Projet 2</h3>
+                <h3>Mon portfolio</h3>
                 <div class="fancyBorder fancyBorder-left fancyBorder-stroke2">
-                    <p>Description du projet Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam.
-                        Illo
-                        omnis ad, impedit, iure exercitationem soluta at non laborum ea neque aliquid. Mollitia voluptas
-                        possimus exercitationem distinctio dolores explicabo!</p>
+                    <p>Pour mon portfolio je désirais réaliser une landing page la plus efficace possible. C'est a dire
+                        qu'elle ne devait pas utiliser de techno superflues mais faire preuve d'un minimum de savoir
+                        faire technique au niveau du style, de l'accessibilité et de son référencement naturel.</p>
                 </div>
                 <ul>
                     <li><a href="#" class="fancyBorder fancyBorder-stroke2" aria-label="Site du projet 2">Voir

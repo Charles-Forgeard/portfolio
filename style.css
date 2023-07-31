@@ -358,6 +358,10 @@ h2, h3 {
     font-size: 1.8rem;
 }
 
+h4{
+    font-size: 1.3rem;
+}
+
 a{
     color: var(--textColor);
     font-size: .9rem;
@@ -559,6 +563,8 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "article" "nav";
+    align-items: center;
+    transition: all 0.3s;
 }
 
 main p{
@@ -572,19 +578,24 @@ main p{
 
 article, .welcome-article{
     grid-area: article;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, max-height 0s ease-in-out 0.3s;
 }
 
 article{
+    max-height: 0;
     transform: scale(0,1);
     transform-origin: right;
+    overflow: hidden;
 }
 
 article:target{
+    transition: transform 0.3s ease-in-out, height 0s;
+    max-height: 100%;
     transform: scale(1,1)
 }
 
 article:has(*:focus){
+    max-height: 100%;
     transform: scale(1,1)
 }
 
@@ -592,11 +603,27 @@ main:has(article:target) .welcome-article, main:has(article *:focus) .welcome-ar
     transform: scale(0,1);
 }
 
-article ul{
+article > ul{
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
     font-weight: 700;
+}
+
+article div{
+    padding-left: 30px;
+}
+
+article div ul{
+    font-size: 0.9rem;
+}
+
+article div li{
+    margin-bottom: 5px;
+}
+
+article div h4{
+    margin: 20px 0 10px;
 }
 
 nav{
@@ -639,12 +666,6 @@ dialog button{
     width: 32px;
     height: 32px;
     line-height: 100%;
-}
-
-@keyframes{
-    to{
-
-    }
 }
 
 
