@@ -23,8 +23,6 @@ const setGradColors = (colors)=>{
 
 setGradColors(pic2RandomColors(randomUnit()))
 
-const copyEmailBtn = document.getElementById("copyEmailBtn")
-
 dialogEmail_btn.addEventListener('click', (e)=>{
     e.preventDefault()
     dialogEmail.close()
@@ -41,7 +39,7 @@ const dialogEmailBaseText = dialogEmail_text.innerText;
 copyEmailBtn.addEventListener('click', async (e)=>{
     e.preventDefault()
     const email = copyEmailBtn.dataset.email
-    window.location.href =`mailto:nom@mailpro.com?subject=Prise%20de%20contact%20projet%20devWeb&body=Bonjour,%0D%0A%0D%0A{Votre demande}%0D%0A(La rédaction est chronophage? Laissez moi vos coordonnées, je vous recontacte dans les plus brefs délais %F0%9F%9A%80.)%0D%0A%0D%0AVoici%20mes%20coordonnées%20:%0D%0A{Prénom}%20{Nom}%0D%0A{Num tél}%0D%0A{lien de contact}`
+    window.location.href =`mailto:${email}?subject=Prise%20de%20contact%20projet%20devWeb&body=Bonjour,%0D%0A%0D%0A{Votre demande}%0D%0A(La rédaction est chronophage? Laissez moi vos coordonnées, je vous recontacte dans les plus brefs délais %F0%9F%9A%80.)%0D%0A%0D%0AVoici%20mes%20coordonnées%20:%0D%0A{Prénom}%20{Nom}%0D%0A{Num tél}%0D%0A{lien de contact}`
     dialogEmail_text.innerText = dialogEmailBaseText
     try{
         dialogEmail.setAttribute('open','true');
